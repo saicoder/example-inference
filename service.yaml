@@ -1,0 +1,10 @@
+entrypoint: main.py
+parameters:
+    - name: SYSTEM_PROMPT
+      kind: String
+      default_value: 'Talk like Yoda always'
+      required: true
+    - name: MODEL
+      kind: String
+      default_value: 'facebook/opt-125m'
+      required: true
