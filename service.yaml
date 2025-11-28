@@ -1,10 +1,15 @@
 entrypoint: main.py
+description: >
+  A high-performance LLM inference service powered by vLLM, providing
+  continuous batching, optimized GPU utilization, and an OpenAI-compatible API
+  for scalable text generation.
+
 parameters:
-    - name: SYSTEM_PROMPT
-      kind: String
-      default_value: 'Talk like Yoda always'
-      required: true
-    - name: MODEL
-      kind: String
-      default_value: 'facebook/opt-125m'
-      required: true
+  - name: MODEL
+    kind: String
+    default_value: 'facebook/opt-125m'
+    required: true
+endpoints:
+  - name: inference
+    protocol: Http
+    port: 8080
