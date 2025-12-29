@@ -3,6 +3,7 @@
 name: 'vLLM'
 version: '0.1'
 entrypoint: 'main.py'
+container_image: 'saicoder/bootloader'
 description: >
     A high-performance LLM inference service powered by vLLM, providing
     continuous batching, optimized GPU utilization, and an OpenAI-compatible API
