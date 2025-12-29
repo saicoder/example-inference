@@ -2,7 +2,7 @@
 
 name: 'vLLM'
 version: '0.1'
-container_image: openeuler/vllm-cpu:latest
+entrypoint: 'main.py'
 description: >
     A high-performance LLM inference service powered by vLLM, providing
     continuous batching, optimized GPU utilization, and an OpenAI-compatible API
@@ -17,4 +17,3 @@ endpoints:
     - name: inference
       protocol: Http
       port: 8000
-
