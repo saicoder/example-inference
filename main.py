@@ -68,7 +68,7 @@ def serve_model():
     """Serve vLLM model as OpenAI-compatible HTTP server in the same process"""
     global llm
 
-    model_name = os.environ["MODEL"] or "facebook/opt-125m"
+    model_name = "facebook/opt-125m"
     host = "0.0.0.0"
     port = 8000
 
