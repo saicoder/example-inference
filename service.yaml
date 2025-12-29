@@ -1,15 +1,20 @@
-entrypoint: main.py
+# yaml-language-server: $schema=./schemas/service.schema.json
+
+name: 'vLLM'
+version: '0.1'
+container_image: openeuler/vllm-cpu:latest
 description: >
-  A high-performance LLM inference service powered by vLLM, providing
-  continuous batching, optimized GPU utilization, and an OpenAI-compatible API
-  for scalable text generation.
+    A high-performance LLM inference service powered by vLLM, providing
+    continuous batching, optimized GPU utilization, and an OpenAI-compatible API
+    for scalable text generation.
 
 parameters:
-  - name: MODEL
-    kind: String
-    default_value: 'facebook/opt-125m'
-    required: true
+    - name: MODEL
+      kind: String
+      default_value: 'facebook/opt-125m'
+      required: true
 endpoints:
-  - name: inference
-    protocol: Http
-    port: 8080
+    - name: inference
+      protocol: Http
+      port: 8000
+
